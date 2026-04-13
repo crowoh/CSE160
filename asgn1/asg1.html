@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ASG1 Painting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 20px;
+    }
+    canvas {
+      border: 1px solid black;
+      background: white;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .row {
+      margin: 8px 0;
+    }
+    button, input {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body onload="main()">
+  <h1>ASG1 Painting</h1>
+
+  <canvas id="webgl" width="600" height="600"></canvas>
+
+  <div class="row">
+    <button id="pointButton">Point</button>
+    <button id="triangleButton">Triangle</button>
+    <button id="circleButton">Circle</button>
+    <button id="clearButton">Clear</button>
+    <button id="pictureButton">Draw Picture</button>
+    <button id="rainbowButton">Rainbow: Off</button>
+  </div>
+
+  <div class="row">
+    <label>Red</label>
+    <input type="range" id="redSlide" min="0" max="100" value="100">
+    <label>Green</label>
+    <input type="range" id="greenSlide" min="0" max="100" value="0">
+    <label>Blue</label>
+    <input type="range" id="blueSlide" min="0" max="100" value="0">
+  </div>
+
+  <div class="row">
+    <label>Size</label>
+    <input type="range" id="sizeSlide" min="5" max="40" value="12">
+
+    <label>Circle Segments</label>
+    <input type="range" id="segmentSlide" min="3" max="30" value="10">
+  </div>
+
+  <p>
+    Awesome feature: rainbow mode for painting. Click the button to toggle it.
+  </p>
+
+  <script src="Point.js"></script>
+  <script src="Triangle.js"></script>
+  <script src="Circle.js"></script>
+  <script src="asg1.js"></script>
+</body>
+</html>
