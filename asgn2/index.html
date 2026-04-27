@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blocky Hummingbird - CSE160 ASG2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Blocky Hummingbird</h1>
+      <p>CSE160 Assignment 2</p>
+    </header>
+
+    <div class="layout">
+      <section class="stage">
+        <canvas id="webgl" width="720" height="720">
+          Please use a browser that supports canvas.
+        </canvas>
+
+        <div class="button-row">
+          <button id="animationOn" type="button">Start flap</button>
+          <button id="animationOff" type="button">Stop flap</button>
+          <button id="resetView" type="button">Reset view</button>
+        </div>
+
+        <p class="small-note">Drag the bird to rotate it. Shift-click the canvas for the dance animation.</p>
+        <p id="performance">FPS: -- | Frame time: -- ms</p>
+      </section>
+
+      <aside class="controls">
+        <h2>Controls</h2>
+
+        <fieldset>
+          <legend>View</legend>
+          <div class="control-line">
+            <label for="globalRotation">Global rotation</label>
+            <output id="globalRotationValue">0</output>
+          </div>
+          <input id="globalRotation" type="range" min="-180" max="180" value="0" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Wing joints</legend>
+          <div class="control-line"><label for="leftUpperWing">Left upper wing</label><output id="leftUpperWingValue">0</output></div>
+          <input id="leftUpperWing" type="range" min="-90" max="90" value="0" />
+
+          <div class="control-line"><label for="leftLowerWing">Left lower wing</label><output id="leftLowerWingValue">0</output></div>
+          <input id="leftLowerWing" type="range" min="-90" max="90" value="0" />
+
+          <div class="control-line"><label for="leftWingTip">Left wing tip</label><output id="leftWingTipValue">0</output></div>
+          <input id="leftWingTip" type="range" min="-90" max="90" value="0" />
+
+          <div class="control-line"><label for="rightUpperWing">Right upper wing</label><output id="rightUpperWingValue">0</output></div>
+          <input id="rightUpperWing" type="range" min="-90" max="90" value="0" />
+
+          <div class="control-line"><label for="rightLowerWing">Right lower wing</label><output id="rightLowerWingValue">0</output></div>
+          <input id="rightLowerWing" type="range" min="-90" max="90" value="0" />
+
+          <div class="control-line"><label for="rightWingTip">Right wing tip</label><output id="rightWingTipValue">0</output></div>
+          <input id="rightWingTip" type="range" min="-90" max="90" value="0" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Other joints</legend>
+          <div class="control-line"><label for="tail">Tail</label><output id="tailValue">0</output></div>
+          <input id="tail" type="range" min="-60" max="60" value="0" />
+
+          <div class="control-line"><label for="head">Head</label><output id="headValue">0</output></div>
+          <input id="head" type="range" min="-45" max="45" value="0" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Colors</legend>
+          <div class="swatch-line"><label for="bodyColor">Body</label><input id="bodyColor" type="color" value="#1a9e6e" /></div>
+          <div class="swatch-line"><label for="headColor">Head</label><input id="headColor" type="color" value="#47d191" /></div>
+          <div class="swatch-line"><label for="wingColor">Wings</label><input id="wingColor" type="color" value="#1a7085" /></div>
+          <div class="swatch-line"><label for="throatColor">Throat patch</label><input id="throatColor" type="color" value="#db1f42" /></div>
+        </fieldset>
+      </aside>
+    </div>
+  </div>
+
+  <script src="matrix.js"></script>
+  <script src="asg2.js"></script>
+</body>
+</html>

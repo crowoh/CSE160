@@ -1,0 +1,148 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+  background: #f4f1e8;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+header {
+  border-bottom: 2px solid #222;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 34px;
+  margin: 0;
+  font-weight: normal;
+}
+
+header p {
+  margin: 4px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) 330px;
+  gap: 24px;
+  align-items: start;
+}
+
+.stage,
+.controls {
+  background: #fffdf8;
+  border: 1px solid #9a9487;
+  padding: 16px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #333;
+  background: #cdefff;
+  cursor: grab;
+}
+
+canvas:active {
+  cursor: grabbing;
+}
+
+.button-row {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 6px 12px;
+  border: 1px solid #222;
+  background: #eee;
+  color: #111;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+.small-note,
+#performance {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+
+#performance {
+  font-weight: bold;
+}
+
+.controls h2 {
+  margin: 0 0 12px;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+fieldset {
+  border: 1px solid #aaa;
+  margin: 0 0 14px;
+  padding: 12px;
+}
+
+legend {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+.control-line,
+.swatch-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+output {
+  min-width: 34px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 4px 0 10px;
+}
+
+input[type="color"] {
+  width: 46px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #333;
+  background: transparent;
+}
+
+@media (max-width: 930px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
