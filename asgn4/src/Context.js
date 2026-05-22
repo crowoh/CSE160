@@ -13,8 +13,6 @@ export default function getContext() {
 
   gl.viewport(0, 0, canvas.width, canvas.height);
   gl.enable(gl.DEPTH_TEST);
-  gl.clearColor(0.2, 0.2, 0.25, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
   window.addEventListener("resize", (e) => {
     gl.canvas.width = window.innerWidth;
