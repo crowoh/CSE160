@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Night Supply Run - Assignment 5</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="hud" class="panel top-left">
+    <h1>Night Supply Run</h1>
+    <p><b>Controls:</b> click game, WASD move normally, Shift sprint, smooth mouse look, E interact, F fireworks test, Esc unlock.</p>
+    <p><b>Objective:</b> collect 4 supplies, repair the radio, open the gate, launch rescue fireworks.</p>
+    <p id="objective">Start near the cabin. Supplies collected: 0 / 4</p>
+    <button id="startBtn">Start first-person controls</button>
+    <button id="resetBtn">Reset player</button>
+  </div>
+  <div id="fps" class="panel fps">FPS: --<br>Draws: --<br>Scale: --</div>
+  <div id="wow" class="panel wow">
+    <h2>Assignment 5 / Wow Point</h2>
+    <p><b>Rubric:</b> Three.js fundamentals scene, perspective camera, mouse controls, 20+ primitives, textured primitive, animated objects, custom textured OBJ/MTL model, skybox, and Ambient + Hemisphere + Directional + Point + Spot lights.</p>
+    <p><b>Wow Point:</b> optimized survival minigame with supply collection, radio repair, opening gate, rescue beacon, visible fireworks, FPS counter, and map-style movement/collision inspired by the earlier game-world assignments.</p>
+  </div>
+  <div class="crosshair">+</div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

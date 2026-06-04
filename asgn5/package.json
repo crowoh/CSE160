@@ -1,0 +1,11 @@
+{
+  "name": "cooper-rubens-assignment-5-restart",
+  "version": "5.0.0",
+  "description": "Static Three.js Assignment 5 survival scene. No Vite required.",
+  "scripts": {
+    "start": "python -m http.server 3000"
+  },
+  "dependencies": {
+    "three": "included-locally"
+  }
+}
